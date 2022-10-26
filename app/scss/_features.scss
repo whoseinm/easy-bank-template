@@ -1,0 +1,45 @@
+.features{
+    text-align: center;
+    @include breakPoinUp(medium){text-align: left;}
+    padding: 5rem 0;
+    background: $LightGrayishBlue;
+    .text{
+        margin-bottom: 3.75rem;
+        @include breakPoinUp(large){width: 60%;}
+        h2{
+            font-size: 1.875rem;
+            font-weight: 300;
+            color: $DarkBlue;
+            margin-bottom: 2.25rem;
+            @include breakPoinUp(large){font-size: 2.25rem;}
+        }
+    }
+    .grid{
+        @include breakPoinUp(medium){
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item{
+            @include breakPoinUp(medium){
+                flex: 0 0 50%;
+            }
+            @include breakPoinUp(large){
+                flex: 1;
+            }
+            padding: 0.9375rem;
+            .icon{
+                margin-bottom: 1.875rem;
+                @include breakPoinUp(large){
+                    margin-bottom: 2.75rem;
+                }
+            }
+            .title{
+                margin-bottom: 1.875rem;
+                font-size: 24px;
+                font-weight: 300;
+                color: $DarkBlue;
+                @include breakPoinUp(large){font-size: 1.5rem;}
+            }
+        }
+    }
+}

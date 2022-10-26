@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap');
+@import "_mixins";
+html{
+    font-size: 100%;
+}
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+body{
+    line-height: 1.3;
+    height: 100vh;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: $GrayishBlue;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.flex{
+    display: flex;
+    &.jsSb{justify-content: space-between;}
+    &.jsC{justify-content: center;}
+    &.alC{align-items: center;}
+}
+a{
+    text-decoration: none;
+    color: $GrayishBlue !important;
+}
+button{
+    padding: 0.875rem 2.1875rem;
+    display: inline-block;
+    background: linear-gradient(to right,$LimeGreen,$BrightCyan);
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-weight: 400;
+    opacity: 0.75;
+    z-index: 0;
+}
+.mobileHide{
+    @include breakPoinDown(medium){
+        display: none;
+    }
+}
+.desktopHide{
+    @include breakPoinUp(large){
+        display: none;
+    }
+}
+.container{
+    margin:auto;
+    height: fit-content;
+    max-width: 1320px;
+    @media(max-width: 1400px){max-width: 1140px;}
+    @media(max-width: 1200px){max-width: 960px;}
+    @media(max-width: 992px){max-width: 720px;}
+    @media(max-width: 768px){max-width: 540px;}
+    @media(max-width: 576px){max-width: 100%;}
+    }
